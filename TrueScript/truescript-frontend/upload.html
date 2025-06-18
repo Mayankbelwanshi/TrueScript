@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload - TrueScript</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f7fc;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #4e73df;
+      padding: 1rem 2rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #f1c40f;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to bottom right, #4e73df, #6f42c1);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1rem;
+      margin-top: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Upload Section */
+    .upload-section {
+      background-color: #fff;
+      margin: 3rem 0;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .upload-section h3 {
+      font-size: 2rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .upload-section p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .upload-button {
+      display: inline-block;
+      background-color: #4e73df;
+      padding: 15px 30px;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .upload-button:hover {
+      background-color: #3e59b9;
+    }
+
+    .file-input {
+      display: none;
+    }
+
+    .file-label {
+      display: inline-block;
+      background-color: #f1c40f;
+      padding: 12px 30px;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .file-label:hover {
+      background-color: #e0b500;
+    }
+
+    .textarea {
+      width: 100%;
+      height: 150px;
+      padding: 15px;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      background-color: #fafafa;
+      resize: vertical;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .upload-section {
+        padding: 1.5rem;
+      }
+
+      .upload-button,
+      .file-label {
+        padding: 10px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>TrueScript</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="upload.html" class="active">Upload</a>
+      <a href="results.html">Results</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">Info</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Upload or Enter Your Code</h2>
+    <p>Simply upload a file or paste your code below for plagiarism detection and get a detailed report.</p>
+  </section>
+
+  <!-- Upload Section -->
+  <section class="upload-section">
+    <h3>Upload Your Code</h3>
+    <p>Select a file to upload for plagiarism checking. We support .txt, .py, .java, and other common code formats.</p>
+    
+    <!-- File Upload -->
+    <label for="file-upload" class="file-label">Choose File</label>
+    <input type="file" id="file-upload" class="file-input" accept=".txt, .py, .java, .js" />
+
+    <!-- Textarea for User Input -->
+    <textarea class="textarea" id="code-text" placeholder="Or paste your code here for plagiarism detection..."></textarea>
+
+    <!-- Upload Button -->
+    <button class="upload-button">Upload & Check</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 TrueScript. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Highlight the active page link
+    const navLinks = document.querySelectorAll('.navbar a');
+    navLinks.forEach(link => {
+      if (window.location.pathname === link.getAttribute('href')) {
+        link.classList.add('active');
+      }
+    });
+
+    // Display file name after selection (Optional Feature)
+    const fileInput = document.getElementById('file-upload');
+    fileInput.addEventListener('change', function() {
+      if (fileInput.files.length > 0) {
+        document.querySelector('.file-label').textContent = fileInput.files[0].name;
+      }
+    });
+  </script>
+</body>
+</html>

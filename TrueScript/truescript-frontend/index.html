@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrueScript - Plagiarism Detection</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>TrueScript</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="results.html">Results</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">Info</a>
+    </nav>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2>Detect Plagiarism with Accuracy</h2>
+      <p>Ensure the authenticity of your code with TrueScript’s plagiarism detection system.</p>
+      <a href="#" class="cta-button">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>Accurate Detection</h3>
+      <p>Our algorithm ensures high precision in detecting similarities and plagiarism in code.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Fast Results</h3>
+      <p>Get your plagiarism report within minutes after uploading your code.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Easy to Use</h3>
+      <p>With a user-friendly interface, you can easily upload and check your code for plagiarism.</p>
+    </div>
+  </section>
+
+  <!-- Quick Links Section -->
+  <section class="quick-links">
+    <div class="container">
+      <h2>Quick Links</h2>
+      <div class="quick-links-cards">
+        <div class="feature-card">
+          <h3>Upload Code</h3>
+          <p>Start by uploading your code for plagiarism detection.</p>
+        </div>
+        <div class="feature-card">
+          <h3>View Results</h3>
+          <p>See the detailed plagiarism report of your uploaded code.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="call-to-action">
+    <div class="container">
+      <h2>Start Detecting Plagiarism Now!</h2>
+      <p>Get instant results on your code. It's simple, fast, and accurate.</p>
+      <!-- <a href="#" class="cta-button">Start Now</a> -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 TrueScript. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle mobile menu
+    function toggleMenu() {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('active');
+    }
+  </script>
+  <section class="quick-links">
+    <div class="container">
+      <h2>Upload Your Code</h2>
+      <form id="uploadForm">
+        <input type="file" id="fileInput" required>
+        <button type="submit" class="cta-button">Upload</button>
+      </form>
+      <div id="resultOutput"></div>
+    </div>
+  </section>
+  
+</body>
+</html>

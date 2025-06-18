@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plagiarism Results - TrueScript</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f7fc;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #4e73df;
+      padding: 1rem 2rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #f1c40f;
+    }
+
+    /* Results Section */
+    .results-section {
+      background-color: #fff;
+      margin: 3rem 0;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .results-section h3 {
+      font-size: 2rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .plagiarism-percent {
+      font-size: 3rem;
+      color: #e74c3c;
+      font-weight: 700;
+      margin-top: 20px;
+    }
+
+    .plagiarism-info {
+      font-size: 1.2rem;
+      color: #666;
+      margin-top: 15px;
+    }
+
+    .result-details {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .result-details h4 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .result-details ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .result-details ul li {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: #4e73df;
+      padding: 15px 30px;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #3e59b9;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .results-section {
+        padding: 1.5rem;
+      }
+
+      .plagiarism-percent {
+        font-size: 2.5rem;
+      }
+
+      .result-details h4 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>TrueScript</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="results.html" class="active">Results</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">Info</a>
+    </nav>
+  </header>
+
+  <!-- Results Section -->
+  <section class="results-section">
+    <h3>Plagiarism Detection Results</h3>
+
+    <div class="plagiarism-percent">
+      78%
+    </div>
+
+    <p class="plagiarism-info">Your code matches with 78% of other publicly available code. Here's a detailed breakdown:</p>
+
+    <!-- Result Details -->
+    <div class="result-details">
+      <h4>Details of Plagiarism</h4>
+      <ul>
+        <li><strong>Matched Text:</strong> 200 lines of code</li>
+        <li><strong>Matching Sources:</strong> 3 sources</li>
+        <li><strong>File Type:</strong> Python (.py)</li>
+        <li><strong>Similarity Found:</strong> Variable names and functions</li>
+        <li><strong>Type of Plagiarism:</strong> Code Duplication</li>
+      </ul>
+    </div>
+
+    <a href="upload.html" class="back-button">Go Back & Check Another File</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 TrueScript. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Highlight the active page link
+    const navLinks = document.querySelectorAll('.navbar a');
+    navLinks.forEach(link => {
+      if (window.location.pathname === link.getAttribute('href')) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

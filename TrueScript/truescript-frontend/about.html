@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - TrueScript</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f7fc;
+    }
+
+    /* Navbar */
+    header {
+      background-color: #4e73df;
+      padding: 1rem 2rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #f1c40f;
+    }
+
+    /* About Section */
+    .about-section {
+      background-color: #fff;
+      margin: 3rem 0;
+      padding: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .about-section h3 {
+      font-size: 2rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .about-section p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .about-section ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .about-section ul li {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .about-section ul li::before {
+      content: '✔';
+      color: #4e73df;
+      margin-right: 10px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .about-section {
+        padding: 1.5rem;
+      }
+
+      .about-section h3 {
+        font-size: 1.8rem;
+      }
+
+      .about-section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>TrueScript</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload</a>
+      <a href="results.html">Results</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html" class="active">Info</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <h3>About TrueScript</h3>
+    <p>TrueScript is a powerful plagiarism detection tool designed specifically for code. Whether you're a student, teacher, or developer, TrueScript helps ensure the originality of your code and protect intellectual property. Our advanced algorithm checks for similarities across a wide range of programming languages.</p>
+    <p>Here are some key features of TrueScript:</p>
+    <ul>
+      <li>Supports multiple programming languages (Python, Java, JavaScript, C++, etc.)</li>
+      <li>Real-time plagiarism detection</li>
+      <li>Comprehensive plagiarism reports with detailed breakdowns</li>
+      <li>Secure and private platform</li>
+      <li>Fast and easy to use</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 TrueScript. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Highlight the active page link
+    const navLinks = document.querySelectorAll('.navbar a');
+    navLinks.forEach(link => {
+      if (window.location.pathname === link.getAttribute('href')) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

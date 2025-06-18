@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4 {
+    color: #1c1c1c;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b5998;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar h1 {
+    color: #fff;
+    font-size: 1.8em;
+  }
+  
+  .navbar nav {
+    display: flex;
+  }
+  
+  .navbar a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover, .navbar a.active {
+    color: #ffcc00;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to right, #3b5998, #8b9dc3);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Features Section */
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+  }
+  
+  .feature-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  /* Quick Links Section */
+  .quick-links {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .quick-links-cards {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .quick-links-cards .feature-card {
+    width: 45%;
+  }
+  
+  /* Call to Action Section */
+  .call-to-action {
+    background-color: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .call-to-action h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer p {
+    font-size: 0.9em;
+  }
+  
+  /* Container */
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar nav {
+      display: none;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .navbar.active nav {
+      display: block;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .hero h2 {
+      font-size: 2.5em;
+    }
+  
+    .hero p {
+      font-size: 1.1em;
+    }
+  
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .quick-links-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .quick-links-cards .feature-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .call-to-action h2 {
+      font-size: 2em;
+    }
+  
+    .cta-button {
+      font-size: 1.2em;
+      padding: 12px 24px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .navbar a {
+      font-size: 1em;
+    }
+  
+    .hero h2 {
+      font-size: 2em;
+    }
+  
+    .hero p {
+      font-size: 1em;
+    }
+  
+    .cta-button {
+      font-size: 1.1em;
+      padding: 10px 20px;
+    }
+  
+    .feature-card {
+      width: 90%;
+    }
+  }
+  
